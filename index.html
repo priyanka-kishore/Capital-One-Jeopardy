@@ -1,1 +1,61 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>CapOne Jeopardy</title>
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Capital One Jeopardy</h1>
+        </header>
+
+        <div class="filter">
+            <div id="directions">
+                <h2>Use any of the filters below to find Jeopardy clues.</h2>
+            </div>
+            <div id="category">
+                <h4>Search Categories:</h4>
+                <input type="text" id="search-bar" placeholder="Search categories" autocomplete="off">
+            </div>
+            <div id="date-input">
+                <!--search by day, week, month-->
+                <h4>Timeframe (YYYY-MM-DD):</h4>
+                <input type="text" id="start-date" placeholder="Enter start date" autocomplete="off">
+                <input type="text" id="end-date" placeholder="Enter end date" autocomplete="off">
+            </div>
+            <div id="difficulty">
+                <h4>Choose difficulty:</h4>
+                <select id="difficulty-input">
+                    <option value="">None</option>
+                    <option value=100>100</option>
+                    <option value=200>200</option>
+                    <option value=300>300</option>
+                    <option value=400>400</option>
+                    <option value=500>500</option>
+                    <option value=600>600</option>
+                    <option value=700>700</option>
+                    <option value=800>800</option>
+                    <option value=900>900</option>
+                    <option value=1000>1000</option>
+                </select>
+            </div>
+            <!--any other smart searching criteria-->
+            <input type="submit" id="submit" value="Search!">
+            <input type="submit" id="getRandom" value="Go random!">
+            <!--button id="submitQuery">Submit query</button-->
+        </div>
+
+        <div id="result">
+            Category ID: <p id="cat-id"></p>
+            Category name:<p id="cat-name"></p>
+        </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</html>
